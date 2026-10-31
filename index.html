@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!--faz q seja responsivo para outras telas celular, tablet etc-->
+    <meta name="description"
+    content="Portal de informações sobre programação, inovação e formação profissional."/><!---resumo sobre o site no padrao de busca -->
+    <meta name="author" content="Luiz Paulo Soares Dos Santos"/><!--autor do site-->
+    <meta name="keywords" content="programação, desenvolvimento web, formação profissional, cursos de TI, inovação tecnológica, HTML, JavaScript, lógica de programação"><!--tags para motores de busca palavras chaves-->
+
+    <title>Portal Conecta Tecnologia</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" /><!--icones gratuitos da google (watss, github etc)-->
+    <link rel="stylesheet" href="estilo.css"/><!--traz o arquivo css-->
+    <!--link rel="icon" type=""  href=""-->
+    <!--icone na aba do navegador nao temos ainda-->
+
+</head>
+<body>
+
+    <header class="cabecalho fundoEscuro" id="topo">
+        <h1 class="tituloPrincipal">Portal Conecta Tecnologia</h1>
+        <h2 class="subtitulo">Aprenda, compartilhe e descubra oportunidades</h2>
+    </header>
+
+    <nav class="topicos fundoIntermediario" aria-label="Menu principal"><!--arial serve pra leitura de tela pessoas especiais-->
+        <ul>
+            <li><a href="#inicio" class="botao-nav">início</a></li>
+            <li><a href="#noticias" class="botao-nav">notícias</a></li>
+            <li><a href="#cursos" class="botao-nav">cursos</a></li>
+            <li><a href="#agenda" class="botao-nav">agenda</a></li>
+            <li><a href="#contato" class="botao-nav">contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="bem-vindo" id="inicio"><!--nome da seçao-->  
+            <h2 class="tituloSecao">Bem-vindo ao nosso portal!</h2><!--titulo menor-->
+            <p class="textoComum">Este site reúne informações sobre programação, inovação e formação profissional. Explore as seções e fique por dentro das atividades.</p><!--paragrafo -->
+        </section>
+
+    <section class="noticias" id="noticias">
+        <h2 class="tituloSecao">Últimas notícias</h2>
+
+        <article><!--article e um conteudo independente como cada noticia e diferente criamos um conteudo uma section q dentro tera outros conteudos distintos-->
+            <h3 class="textoComum">Oficina de desenvolvimento web</h3>
+            <p class="textoComum">Os estudantes poderão participar...</p>
+        </article>
+
+        <article>
+            <h3 class="textoComum">Feira de projetos tecnológicos</h3>
+            <p class="textoComum">A exposição apresentará...</p>
+        </article>
+    </section>
+
+        <section class="cursos" id="cursos">
+            <h2 class="tituloSecao">Cursos disponíveis</h2>
+            <ul><!--lista nao ordenada -->
+                <li class="textoComum">Introdução ao HTML</li><!--e cada item da lista-->
+                <li class="textoComum">Fundamentos de CSS</li>
+                <li class="textoComum">Lógica de programação</li>
+                <li class="textoComum">Introdução ao JavaScript</li>
+            </ul>
+        </section>
+
+        <section class="agenda" id="agenda"><!--nome da agenda-->
+            <h2 class="tituloSecao">Agenda de atividades</h2>
+            <p class="textoComum">Confira os próximos eventos do portal:</p>
+
+
+            <table class="tabelaAgenda">
+
+                <thead>
+                    <tr class="fundoIntermediario">
+                        <th class="textoComum">Data</th>
+                        <th class="textoComum">Atividade</th>
+                        <th class="textoComum">Local</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="textoComum">05/11/2026</td>
+                        <td class="textoComum">Oficina de HTML</td>
+                        <td class="textoComum">Laboratório 1</td>
+                    </tr>
+
+                    <tr>
+                        <td class="textoComum">12/11/2026</td>
+                        <td class="textoComum">Feira de Projetos</td>
+                        <td class="textoComum">Auditório</td>
+                    </tr>
+                    <tr>
+                        <td class="textoComum">19/11/2026</td>
+                        <td class="textoComum">Palestra sobre carreiras em TI</td>
+                        <td class="textoComum">Sala multimídia</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="contato" id="contato">
+            <h2 class="tituloSecao">Entre em contato</h2>
+            <p class="textoComum">Envie sua mensagem preenchendo o formulário:</p>
+            <form action="#contato" method="get"><!--form e uma açao do usuario q tem o metodo gert vai pegar a informaçao do usuario-->
+
+                <p class="textoComum"><label for="nome">Nome:</label><br><input type="text" id="nome" name="nome" size="45"></p><!--nome e o texto exibido ele pede a resposta em text q vai  ser guardado em nome e limite de caracter-->
+
+                <p class="textoComum"><label for="email">E-mail:</label><br><input type="email" id="email" name="email" size="45"></p>
+
+                <p class="textoComum"><label for="assunto">Assunto:</label><br>
+                    <select id="assunto" name="assunto">
+                        <option value="duvida">Dúvida</option>
+                        <option value="curso">Cursos</option>
+                        <option value="evento">Eventos</option>
+                    </select>
+                </p>
+
+                <p class="textoComum"><label for="mensagem">Mensagem:</label><br><textarea id="mensagem" name="mensagem" cols="45" rows="5"></textarea></p>
+                <p><input type="submit" value="Enviar mensagem"> <input type="reset" value="Limpar"></p>
+            </form>
+
+            <p class="textoComum"><small><em>Formulário demonstrativo: não envia dados para um servidor.</em></small></p>
+        </section>        
+        
+
+    </main>
+
+    
+    <aside class="fundoLateral">
+        <h2 class="tituloSecao">Destaques</h2>
+
+        <p class="textoComum"><strong>Dica da semana</strong><br>Pratique HTML criando diferentes tipos de páginas.</p>
+        <hr>
+        <h2 class="tituloSecao">Links úteis</h2>
+
+        <p class="textoComum"><a href="https://www.w3.org/" target="_blank" rel="noopener noreferrer">W3C</a><br><a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></p>
+        <hr>
+        <h2 class="tituloSecao">Enquete</h2>
+        <p class="textoComum">Qual assunto você quer aprender?</p>
+        <form action="#" method="get">
+            <input type="radio" name="tema" value="html"> <span class="textoComum">HTML</span><br>
+            <input type="radio" name="tema" value="css"> <span class="textoComum">CSS</span><br>
+            <input type="radio" name="tema" value="js"> <span class="textoComum">JavaScript</span><br><br>
+
+            <button type="button" onclick="alert('Enquete demonstrativa!')">Votar</button>
+        </form>
+    </aside>
+    
+    <footer class="cabecalho fundoEscuro"> 
+        <p class="textoPequeno">Portal Conecta Tecnologia | Atividade didática de modernização HTML 4.01 para HTML5</p>
+
+        <p class="textoPequeno"><a href="#topo">Voltar ao topo</a></p>
+    </footer>
+</body>
+</html>
